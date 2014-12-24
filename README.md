@@ -1,14 +1,15 @@
 Skillset-Visualization--
 ========================
-Welcome to a Visualization of my diverse Skillset. There is a graphic png file to quickly attune you as to how all 
-the skills are connected and the grouping for all the skillset 
-Some of the Skills Visualized are 
+Welcome to a Visualization of my diverse Skillset. There is a graphic file to quickly attune you as to how all 
+my skills are interconnected and the grouping for all the skillset This particular Portfolio also makes reference to parent and child elements concepts using javascript, css and then html. Also this work illustrates having a base template where branches are created from.
+
+Please Check for Master/Branch Commits of My Work Under these Categories 
+
 Infographics 
 Graphics 
 Video Production 
 WireFraming 
 Usability 
 Databases
-Web Scripting/Styling 
-This particular Portfolio provides the ability to make reference to parent child elements in javascript, css and then html
-This is very important in xml and especially object oriented programming concepts
+<b> Web Scripting/Styling </b> 
+
