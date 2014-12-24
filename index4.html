@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head> 
+		 <link rel="stylesheet" href="stylesheets/screen4.css" />
+	</head> 
+	<body>
+		<table>
+			<tr><td id="mytd">
+				<div id="log"></div>				
+				<div id="container">
+					<div id="wrap">
+						<div id="tree-container"></div>
+					</div>
+
+					<div id="PHP">
+						<p class="item-text"><a href="oni@temple.edu">oni@temple.edu</a></p>
+					</div>
+					
+
+					<div id="Infographics">
+						
+						
+						
+					</div>
+
+					<div id="Graphics">
+						<
+					</div>
+
+					<div id="Video Production">
+					
+					
+					</div>
+
+					<div id="Wireframing">
+					
+						
+					</div>
+
+					<div id="Usability">
+						
+					</div>
+
+					<div id="Databases">
+					
+					</div>
+
+					<div id="MYSQL">
+						
+					</div>
+
+					<div id="XAMPP">
+						<
+					</div>
+
+					<div id="LAMPP">
+						
+					</div>
+                    <div id="NOSQL">
+						
+					</div>
+					<div id="Web Scripting/Styling">
+						
+					</div>
+
+					<div id="Javascript">
+						
+					</div>
+
+					<div id="CSS">
+						
+					</div>
+
+					<div id="XHTML/HTML">
+						
+					</div>
+
+					<div id="XML">
+						
+					</div>	
+
+					<div id="XSLT">
+						
+					</div>
+
+					<div id="SQL">
+						
+					</div>
+					
+					<div id="Programming">
+						
+					</div>
+					
+					<div id="PHP">
+						
+					</div>
+					
+					<div id="Java">
+						
+					</div>
+					
+					<div id="Content Management System">
+						
+					</div>
+					<div id="Health Information Registry ">
+						
+					</div>
+					<div id="Operating System">
+						
+					</div>
+					<div id="Cloud Computing">
+					
+					</div>
+					<div id="Networking">
+						
+					</div>
+					<div id="Version Control">
+						
+					</div>
+
+				</div>
+
+			</td></tr>
+
+		</table>
+
+				<!-- </div> -->
+
+			<!-- </div> -->
+
+		<!-- </div> -->
+		<script type="text/javascript" src="javascripts/jquery.js"></script>
+
+		<script type="text/javascript" src="javascripts/d3.js"></script>
+	
+		<script type="text/javascript" src="javascripts/d3.layout.js"></script>
+	
+		<script type="text/javascript" src="javascripts/build_tree2.js"></script>
+		
+		<script>
+
+		var BrowserDetect = {
+	init: function () {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent)
+			|| this.searchVersion(navigator.appVersion)
+			|| "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function (data) {
+		for (var i=0;i<data.length;i++)	{
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1)
+					return data[i].identity;
+			}
+			else if (dataProp)
+				return data[i].identity;
+		}
+	},
+	searchVersion: function (dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	},
+	dataBrowser: [
+		{
+			string: navigator.userAgent,
+			subString: "Chrome",
+			identity: "Chrome"
+		},
+		{ 	string: navigator.userAgent,
+			subString: "OmniWeb",
+			versionSearch: "OmniWeb/",
+			identity: "OmniWeb"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Apple",
+			identity: "Safari",
+			versionSearch: "Version"
+		},
+		{
+			prop: window.opera,
+			identity: "Opera",
+			versionSearch: "Version"
+		},
+		{
+			string: navigator.vendor,
+			subString: "iCab",
+			identity: "iCab"
+		},
+		{
+			string: navigator.vendor,
+			subString: "KDE",
+			identity: "Konqueror"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Firefox",
+			identity: "Firefox"
+		},
+		{
+			string: navigator.vendor,
+			subString: "Camino",
+			identity: "Camino"
+		},
+		{		// for newer Netscapes (6+)
+			string: navigator.userAgent,
+			subString: "Netscape",
+			identity: "Netscape"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "MSIE",
+			identity: "Explorer",
+			versionSearch: "MSIE"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Gecko",
+			identity: "Mozilla",
+			versionSearch: "rv"
+		},
+		{ 		// for older Netscapes (4-)
+			string: navigator.userAgent,
+			subString: "Mozilla",
+			identity: "Netscape",
+			versionSearch: "Mozilla"
+		}
+	],
+	dataOS : [
+		{
+			string: navigator.platform,
+			subString: "Win",
+			identity: "Windows"
+		},
+		{
+			string: navigator.platform,
+			subString: "Mac",
+			identity: "Mac"
+		},
+		{
+			   string: navigator.userAgent,
+			   subString: "iPhone",
+			   identity: "iPhone/iPod"
+	    },
+		{
+			string: navigator.platform,
+			subString: "Linux",
+			identity: "Linux"
+		}
+	]
+
+};
+	</script>
+	<script>
+    	if ($.browser.msie  && parseInt($.browser.version, 10) === 8) {
+  				$("#container").html("<div id='error'>This site uses scale vector graphics. We've detected it cannot be viewed in your current browser.<br/><br/>To view, please take one of the following steps:<br/><br/><ul><li>Upgrade / Install <a href='http://www.microsoft.com/ie9'>Internet Explorer 9<a></li><br/><li>Install <a href='https://www.google.com/chrome'>Google Chrome</a></li><br/><li> Install <a href='http://apple.com/safari'>Safari</a></li></ul><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Thank You</div>");
+
+		} else if ($.browser.msie  && parseInt($.browser.version, 10) === 7)	{
+				$("#container").html("<div id='error'>This site uses scale vector graphics. We've detected it cannot be viewed in your current browser.<br/><br/>To view, please take one of the following steps:<br/><br/><ul><li>Upgrade / Install <a href='http://www.microsoft.com/ie9'>Internet Explorer 9<a></li><br/><li>Install <a href='https://www.google.com/chrome'>Google Chrome</a></li><br/><li> Install <a href='http://apple.com/safari'>Safari</a></li></ul><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Thank You</div>");
+
+		} 
+    </script>
+	</body>
+</html>
