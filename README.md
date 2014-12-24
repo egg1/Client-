@@ -12,4 +12,12 @@ WireFraming
 Usability 
 Databases
 <b> Web Scripting/Styling </b> 
-
+JavaScript 
+CSS
+XHTML/HTML
+XML 
+XSLT 
+SQL 
+Programming
+PHP
+Java 
